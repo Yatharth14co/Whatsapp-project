@@ -14,15 +14,15 @@ async function scrape(url)
  );
 
 
- let data1=fs.readFileSync("data1.txt","utf-8");
+ let data1=fs.readFileSync("file1.txt","utf-8");
   
  let page = await browser.newPage();
   
  await page.goto(url);
   
- await page.waitForSelector("span [title='Arpit Mait H3']");
+ await page.waitForSelector("span [title='My No']");
  
- let target = await page.$("span [title='Arpit Mait H3']");
+ let target = await page.$("span [title='My No']");
   
  await target.click();
   
@@ -38,11 +38,11 @@ async function scrape(url)
   }
 
 
-  let data2=fs.readFileSync("data2.txt","utf-8");
+  let data2=fs.readFileSync("file2.txt","utf-8");
  
-  await page.waitForSelector("span [title='Yatharth Mittal']");
+  await page.waitForSelector("span [title='Keshav It Mait']");
   
-  let target2 = await page.$("span [title='Yatharth Mittal']");
+  let target2 = await page.$("span [title='Keshav It Mait']");
   
   await target2.click();
   
@@ -57,11 +57,11 @@ async function scrape(url)
   }
 
 
-  let data3=fs.readFileSync("data3.txt","utf-8");
+  let data3=fs.readFileSync("file3.txt","utf-8");
   
-  await page.waitForSelector("span [title='Mukul']");
+  await page.waitForSelector("span [title='Sudhir']");
   
-  let target3 = await page.$("span [title='Mukul']");
+  let target3 = await page.$("span [title='Sudhir']");
  
   await target3.click();
   
